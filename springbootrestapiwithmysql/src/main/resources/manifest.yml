@@ -1,0 +1,8 @@
+---
+applications:
+- name: springbootrestapi
+  memory: 1G
+  random-route: true
+  path: ./target/springbootrestapi-0.0.1-SNAPSHOT.jar
+  buildpack: java_buildpack
+   
