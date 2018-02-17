@@ -1,0 +1,57 @@
+---
+server:
+  port: 8080
+  contextPath: /SpringBootCRUDApp
+---
+spring:
+  profiles: local,default
+datasource:
+  sampleapp:
+    url: jdbc:h2:~/test
+    username: SA
+    password:
+    driverClassName: org.h2.Driver
+    defaultSchema:
+    maxPoolSize: 10
+    hibernate:
+      hbm2ddl.method: create-drop
+      show_sql: true
+      format_sql: true
+      dialect: org.hibernate.dialect.H2Dialect
+---
+spring:
+  profiles: prod
+datasource:
+  sampleapp:
+    url: jdbc:mysql://localhost:3306/mysql
+    username: root
+    password: test
+    driverClassName: com.mysql.jdbc.Driver
+    defaultSchema:
+    maxPoolSize: 20
+    hibernate:
+      hbm2ddl.method: create-drop
+      show_sql: true
+      format_sql: true
+      dialect: org.hibernate.dialect.MySQLDialect
+
+endpoints:
+    info:
+        enabled: true
+        id: info
+        sensitive: false
+    metrics:
+        id: mymetrics
+        sensitive: false
+    shutdown:
+        enabled: true
+    beans:
+        enabled: true
+        id: springbeans
+        sensitive: false 
+info:
+    app:
+        description: Simple project of Spring Actuator with examples
+        name: Spring Actuator Example
+        version: 0.0.1-SNAPSHOT        
+
