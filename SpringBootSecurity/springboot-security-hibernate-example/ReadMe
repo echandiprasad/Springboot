@@ -1,0 +1,46 @@
+About auhtenticating user present in database using spring security with form login feature.
+We will be defining our custom UserDetailService and hibernate with integration to spring to connect to the database. 
+By using spring security we will ensure that our app is secured against Cross Site Request Forgery (CSRF)
+
+1. Environment Setup
+2. Maven Dependencies
+3. Project Structure 
+4. Spring Bean Configuration
+5. Configuring Hikari Datasource
+6. Hibernate Implementation
+7. Client Side Implementation
+8. DB Configurations
+9. Run Application
+
+Environment Setup 
+
+1. JDK 8 
+2. Spring Boot
+3. Intellij Idea/ eclipse
+4. Maven
+
+Maven Dependencies
+
+1.  spring-boot-starter-parent: provides useful Maven defaults. 
+	It also provides a dependency-management section so that you can omit version tags for existing dependencies.
+
+2.  spring-boot-starter-web: includes all the dependencies required to create a web app. 
+	This will avoid lining up different spring common project versions.
+
+3.  spring-boot-starter-tomcat: enable an embedded Apache Tomcat 7 instance, by default. 
+	We can overriden this by defining our version. "<tomcat.version>8.0.3</tomcat.version>".
+
+4.  tomcat-embed-jasper: provides support for .jsp file rendering.
+
+5.  spring-boot-starter-security: take care of all the required dependencies related to spring security.
+
+SpringBootServletInitializer enables process used in Servlet 3.0 using web.xml
+@SpringBootApplication: This is a convenience annotation that is equivalent to declaring 
+@Configuration,  @EnableAutoConfiguration and @ComponentScan.
+
+Run Application
+
+1. Run Application.java as a java application.
+
+2. Hit the url as http://localhost:8080/dashboard 
+ 
